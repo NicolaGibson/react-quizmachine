@@ -1,7 +1,7 @@
 export function fetchQuestionFromAPI(quizQuestion) {
   return function(dispatch) {
     fetch(
-      `https://opentdb.com/api.php?amount=10&category=20&difficulty=medium&type=multiple`
+      `https://opentdb.com/api.php?amount=1&category=20&difficulty=medium&type=multiple`
     )
       .then(response => response.json())
 
@@ -22,16 +22,14 @@ export function receiveQuestion(result) {
   };
 }
 
-/* export function verifyAnswer(answerToQuestion){
-  return{
-    type: 'RECEIEVE_ANSWER,
-    answer
-  }
-}*/
+export function correctAnswer() {
+  return {
+    type: "CORRECT_ANSWER"
+  };
+}
 
-/* export function updateScore (score){
-  return{
-   type: 'RECEIVE_SCORE',
-   score
-  }
-} */
+export function incorrectAnswer() {
+  return {
+    type: "INCORRECT_ANSWER"
+  };
+}
