@@ -1,6 +1,6 @@
-import { combineReducers } from 'redux';
-import placeholder from './placeholder';
+import { combineReducers } from "redux";
+import receiveQuestionReducer from "./receiveQuestionReducer";
 
 export default combineReducers({
-  placeholder
+  result: receiveQuestionReducer
 });
